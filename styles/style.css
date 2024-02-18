@@ -2,4 +2,112 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  inline-size: 375px;
+  margin: 0 auto;
+  font-family: 'IBM Plex Mono';
+  font-weight: 400;
+}
+
+.header {
+  display: grid;
+  padding: 10px;
+  background-image: url(../images/cover-image-dark.png);
+  position: relative;
+  grid-template-rows: 1fr 1fr 1fr;
+  /* grid-template-rows: 10px 1fr 1fr 1fr 10px; */
+  align-items: center;
+  background-position: bottom;
+  /* background-repeat: no-repeat; */
+  min-height: 668px;
+  /* min-height: 1024px; */
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  position: absolute;
+  content: '';
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::before {
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+  top: 10px;
+  right: 10px;
+  /* justify-self: end;
+  align-self: start; */
+  
+}
+
+.decorated-zone::after {
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+  bottom: 10px;
+  left: 10px; 
+  /* align-self: end;
+  justify-self: start; */
+}
+
+.header__dark-inscription {
+  color: var(--accent-color);
+  display: flex;
+  font-size: 18px;
+  position: absolute;
+  top: 10px;
+  right: 19px;
+  
+}
+
+.header__dark-inscription::after{
+  content: '';
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  margin-inline-start: 10px;
+  align-self: center;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+
+}
+
+.header__theme-menu {
+  color: var(--accent-color);
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.header__theme-menu-button {
+  inline-size: 70px;
+  block-size: 26px;
+  text-transform: lowercase;
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+}
+
+.header__h1 {
+  font-size: var(--h1-size);
+  font-family: 'IBM Plex Mono';
+  font-weight: 700;
+  line-height: 96px;
+  color: var(--h1-color);
+  text-shadow: 4px 4px 0 var(--accent-color); 
+}
+
+.header__title {
+  font-weight: 700;
+  color: black;
+  justify-self: end;
+}
+
+.title-decor {
+  font-size: 18px;
+  line-height: 23.4px;
+  background-color: var(--accent-color);
 }
