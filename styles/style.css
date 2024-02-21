@@ -18,7 +18,7 @@
   margin: 0 auto;
   font-family: 'IBM Plex Mono';
   font-weight: 400;
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--background);
   background-attachment: fixed;
   /* background-size: cover;  */
   z-index: 0;
@@ -29,14 +29,16 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-color: rgb(0 0 0 / 0.5);
+  /* background-color: rgb(0 0 0 / 0.5); */
   z-index: -1;
 }
+
+.page.theme_light .header__dark-inscription{display: none;}
 
 .header {
   display: grid;
   padding: 10px;
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--background);
   position: relative;
   /* grid-template-rows: 1fr 1fr 1fr; */
   grid-template-rows: 10px 1fr 1fr 1fr 10px;
@@ -86,6 +88,7 @@
   right: 19px;
 }
 
+
 .header__dark-inscription::after{
   content: '';
   inline-size: 9px;
@@ -113,6 +116,7 @@
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--accent-color);
+  pointer-events: none
 }
 
 .header__theme-menu-button {
@@ -161,7 +165,7 @@
   font-size: 18px;
   line-height: 23.4px;
   background-color: var(--accent-color);
-  color: black;
+  color: var(--color-subtitle);
 }
 
 /* .main {
@@ -187,7 +191,7 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
-  color: var(--accent-color);
+  color: var(--color-title);
 }
 
 .main__subtitle {
@@ -197,7 +201,7 @@
 .main__text {
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--pink);
+  color: var(--color-text);
   margin-block-start: 10px;
 }
 
@@ -207,7 +211,7 @@
 }
 
 .main__link:hover {
-  box-shadow: inset 0 -1px var(--pink);
+  box-shadow: inset 0 -1px var(--color-text);
 }
 
 .main__link:focus {
@@ -215,7 +219,7 @@
 }
 
 .main__link:focus-visible { 
-  outline: 1px solid var(--pink);
+  outline: 1px solid var(--color-text);
 }
 
 .gallery {
@@ -534,5 +538,30 @@
     min-height: 768px;
     padding: 20px;
     margin-block-start: 40px;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .root.theme_dark {
+    --accent-color: #ff0070;
+    --h1-color: #DB00FF;
+    --h1-size: 116px;
+    --background: url(../images/cover-image-dark.png);
+    --color-text: #F1B2CE;
+    --color-subtitle: #000;
+    --color-title: #ff0070;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .page.theme_light {
+    --accent-color: #FF8DCB;
+    --h1-color: #FFC2E6;
+    --h1-size: 116px;
+    --color-text: #353430;
+    --background: url(../images/cover-image-light.png);
+    --color-subtitle: #353430;
+    --color-title: #353430;
   }
 }

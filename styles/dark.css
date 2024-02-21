@@ -3,16 +3,16 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-.root.theme_dark {
-  --accent-color: #ff0070;
-  --h1-color: #DB00FF;
-  --h1-size: 116px;
-  --pink: #F1B2CE;
-}
-
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --accent-color: #ff0070;
+  --h1-color: #DB00FF;
+  --h1-size: 116px;
+  --background: url(../images/cover-image-dark.png);
+  --color-text: #F1B2CE;
+  --color-subtitle: #000;
+  --color-title: #ff0070;
 }
