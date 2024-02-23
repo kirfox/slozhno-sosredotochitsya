@@ -16,4 +16,23 @@
   --background: url(../images/cover-image-light.png);
   --color-subtitle: #353430;
   --color-title: #353430;
+  --background-color: #FFF1F7;
+  --dark-inscription: none;
+  --text-size: 18px;
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+        /* Дублируем переменные светлой темы */   
+        --accent-color: #FF8DCB;
+        --h1-color: #FFC2E6;
+        --h1-size: 116px;
+        --color-text: #353430;
+        --background: url(../images/cover-image-light.png);
+        --color-subtitle: #353430;
+        --color-title: #353430;
+        --background-color: #FFF1F7; 
+        --dark-inscription: none;
+        --text-size: 18px;
+    }
+  }
