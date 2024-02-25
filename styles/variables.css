@@ -1,11 +1,6 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
 :root {
   --accent-color: #ff0070;
-  --h1-color: #DB00FF;
-  --h1-size: 116px;
+  --main-title-color: #DB00FF;
   --color-text: #F1B2CE;
   --background: url(../images/cover-image-dark.png);
   --color-subtitle: #000;
