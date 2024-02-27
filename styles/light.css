@@ -8,6 +8,7 @@
   --background-color: #fff1f7;
   --dark-inscription: none;
   --text-size: 18px;
+  --color-hover-button: rgb(53,52,48, 0.4)
 }
 
 @media (prefers-color-scheme: light) {
@@ -21,5 +22,6 @@
     --background-color: #fff1f7;
     --dark-inscription: none;
     --text-size: 18px;
+    --color-hover-button: rgb(53,52,48, 0.4)
   }
 }
