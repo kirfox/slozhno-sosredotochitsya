@@ -1,12 +1,12 @@
 .page.theme_dark {
   --accent-color: #ff0070;
-  --main-title-color: #DB00FF;
+  --main-title-color: #db00ff;
   --background: url(../images/cover-image-dark.png);
-  --color-text: #F1B2CE;
+  --color-text: #f1b2ce;
   --color-subtitle: #000;
   --color-title: #ff0070;
   --background-color: #000028;
   --dark-inscription: flex;
   --text-size: 18px;
-  --color-hover-button: rgb(255,0,112, 0.4);
+  --color-hover-button: rgb(255, 0, 112, 0.4);
 }
